@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="vjacademy.TestComponents.Listeners"/>
+  </listeners>
+  <test name="Submit Order Test">
+    <classes>
+      <class name="vjacademy.tests.SubmitOrderTest"/>
+    </classes>
+  </test> <!-- Submit Order Test -->
+  <test name="Error Validation Tests">
+    <classes>
+      <class name="vjacademy.tests.ErrorValidationTests"/>
+    </classes>
+  </test> <!-- Error Validation Tests -->
+  <test name="Submit Order Test(failed)">
+    <classes>
+      <class name="vjacademy.tests.ErrorValidationTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- vjacademy.tests.ErrorValidationTests -->
+      <class name="vjacademy.tests.SubmitOrderTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApp"/>
+          <include name="orderHistoryTest"/>
+          <include name="submitOrder"/>
+        </methods>
+      </class> <!-- vjacademy.tests.SubmitOrderTest -->
+    </classes>
+  </test> <!-- Submit Order Test(failed) -->
+  <test name="Error Validation Tests(failed)">
+    <classes>
+      <class name="vjacademy.tests.ErrorValidationTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApp"/>
+          <include name="LoginErrorValidation"/>
+        </methods>
+      </class> <!-- vjacademy.tests.ErrorValidationTests -->
+      <class name="vjacademy.tests.SubmitOrderTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- vjacademy.tests.SubmitOrderTest -->
+    </classes>
+  </test> <!-- Error Validation Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
