@@ -17,6 +17,8 @@ public class StandaloneTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		
+		System.out.println("test1");
+		System.out.println("test2");
 		String pname="IPHONE";
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
