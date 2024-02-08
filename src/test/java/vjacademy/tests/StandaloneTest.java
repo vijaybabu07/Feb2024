@@ -19,6 +19,8 @@ public class StandaloneTest {
 		
 		System.out.println("test1");
 		System.out.println("test2");
+		
+		System.out.println("test3");
 		String pname="IPHONE";
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
